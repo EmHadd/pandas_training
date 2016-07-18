@@ -268,6 +268,7 @@ model = smf.OLS(refinedClicksDf['Amazon_refined_clicks'], refinedClicksDf['SEO_r
 res = model.fit()
 print res.summary()
 
+
 #test residuals normality
 import statsmodels.stats.api as ss
 ss.jarque_bera(res.resid)
