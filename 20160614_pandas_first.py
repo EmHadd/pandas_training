@@ -254,10 +254,9 @@ for c in channels:
 
 #some statistical insights
 #correlation
-refinedClicksDf['Amazon_refined_clicks'].corr(refinedClicksDf['SEO_refined_clicks'])
-
 stat = pd.stats.moments
 
+refinedClicksDf['Amazon_refined_clicks'].corr(refinedClicksDf['SEO_refined_clicks'])
 movingAve = stat.rolling_mean(refinedClicksDf['Amazon_refined_clicks'],10)
 plt.figure
 movingAve.plot()
